@@ -6,6 +6,10 @@ import random
 import re
 import sys
 
+# Problems
+# https://www.hackerrank.com/challenges/counting-valleys/problem
+
+
 def countingValleys(n, s):
     level = 0
     valleys = 0

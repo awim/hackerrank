@@ -6,6 +6,9 @@ import random
 import re
 import sys
 
+# Problem
+# https://www.hackerrank.com/challenges/sock-merchant/problem
+
 # Complete the sockMerchant function below.
 def sockMerchant(n, ar):
     sockSearch = {
