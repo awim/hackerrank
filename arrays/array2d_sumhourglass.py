@@ -24,7 +24,7 @@ def sumInRowSplit(splitter, arr):
 # Complete the hourglassSum function below.
 def hourglassSum(arr):
     _top, _mid, _bot = [], [], []
-    _max = 0
+    _max = None
 
     l = len(arr)-2
     for i in range(l):
@@ -40,7 +40,7 @@ def hourglassSum(arr):
         
         for j,b in enumerate(_top):
             max = b + _mid[j] + _bot[j]
-            if max >= _max:
+            if _max == None or max >= _max:
                 _max = max
 
     return _max
@@ -80,13 +80,13 @@ arr = [
     [-1, -3, -1, -2, -4, -5]
 ]
 
-arr = [
-    [-1, 1, -1, 0, 0, 0],
-    [0, -1, 0, 0, 0, 0],
-    [-1, -1, -1, 0, 0, 0],
-    [0, -9, 2, -4, -4, 0],
-    [-7, 0, 0, -2, 0, 0],
-    [0, 0, -1, -2, -4, 0]
-]
+# arr = [
+#     [-1, 1, -1, 0, 0, 0],
+#     [0, -1, 0, 0, 0, 0],
+#     [-1, -1, -1, 0, 0, 0],
+#     [0, -9, 2, -4, -4, 0],
+#     [-7, 0, 0, -2, 0, 0],
+#     [0, 0, -1, -2, -4, 0]
+# ]
 
 print (hourglassSum(arr))
